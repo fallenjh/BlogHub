@@ -1,0 +1,11 @@
+package $package;
+import java.util.Date;
+
+/**
+ * $UpperClassName
+ * 这个类是自动生成，这里在测试中文乱码
+ * @author ChenYishi
+ */
+public class $UpperClassName extends OperationInfo {
+
+}

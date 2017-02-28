@@ -1,0 +1,18 @@
+package $package;
+import java.util.Date;
+
+/**
+ * ${UpperClassName}Dao
+ * 这个类是自动生成，这里在测试中文乱码
+ * @author ChenYishi
+ */
+public interface ${UpperClassName}Dao {
+
+	void save(${UpperClassName});
+	
+	void update(${UpperClassName});
+
+	void delete(${UpperClassName});
+	
+	List<${UpperClassName}> list();
+}
