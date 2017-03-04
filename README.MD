@@ -1,3 +1,10 @@
+```java
+@Override
+protected Class<?> requiredViewClass() {
+	return MarkdownView.class;
+}
+```
+
 # BlogHub
 用毕生所学，建造一个博客网站
 > mysql + mybatis + java8 + springboot + elk + velocity
