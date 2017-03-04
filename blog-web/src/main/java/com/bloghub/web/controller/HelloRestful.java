@@ -1,24 +1,34 @@
 package com.bloghub.web.controller;
 
-import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-@RestController
+import com.google.common.collect.Maps;
+
+import com.google.common.collect.Maps;
+
+@Controller
 public class HelloRestful {
 
-	@RequestMapping("/hello")
-	public String hello(){
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	public String hello() {
 		return "hello";
 	}
-	
-	@RequestMapping("/helloMap")
-	public Map<String, String> helloMap(){
-		Map<String, String> map = new HashMap();
+
+	@RequestMapping(value = "/helloMap")
+	public Map<String, String> helloMap() {
+		Map<String, String> map = Maps.newHashMap();
 		map.put("name", "cys");
 		map.put("word", "hello");
 		return map;
+	}
+
+	@RequestMapping(value = "/markdown")
+	public String helloMarkdown() {
+		return "index";
 	}
 }
