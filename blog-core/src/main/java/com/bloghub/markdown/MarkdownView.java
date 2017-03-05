@@ -23,9 +23,19 @@ public class MarkdownView extends AbstractTemplateView {
 			HttpServletResponse response) throws Exception {
 
 		PrintWriter writer = response.getWriter();
-        writer.append("<html><body>");
+		response.addHeader("Content-type", "text/html");
+		writer.append("<!doctype html>\n");
+        writer.append("<html>\n");
+        writer.append("<head>\n");
+//        writer.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n");
+        writer.append("<link rel=\"stylesheet\" href=\"highlightjs/9.9.0/styles/atom-one-dark.css\">\n");
+        writer.append("<script src=\"highlightjs/9.9.0/highlight.js\"></script>\n");
+        writer.append("<script src=\"highlightjs/9.9.0/registerLanguage.min.js\"></script>\n");
+        writer.append("<script>hljs.initHighlightingOnLoad();</script>\n");
+        writer.append("</head>\n");
+        writer.append("<body>\n");
         writer.append(getHtmlFromMarkdown());
-        writer.append("</body></html>");
+        writer.append("</body>\n</html>");
 	}
 
 	private String getHtmlFromMarkdown() throws URISyntaxException, IOException {

@@ -5,6 +5,7 @@ import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.common.collect.Maps;
 
@@ -12,6 +13,7 @@ import com.google.common.collect.Maps;
 public class HelloRestful {
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	@ResponseBody
 	public String hello() {
 		return "hello";
 	}

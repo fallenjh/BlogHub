@@ -10,16 +10,15 @@ import com.vdurmont.emoji.EmojiParser;
 public class MarkdownUtil {
 
 	private static Parser parser = Parser.builder().build();
+	private static HtmlRenderer renderer = HtmlRenderer.builder().build();
 	
 	public static String mdToHtml(String markdown) {
 		if (StringUtils.isBlank(markdown)) {
 			return "";
 		}
 		Node document = parser.parse(markdown);
-		HtmlRenderer renderer = HtmlRenderer.builder().build();
 		String content = renderer.render(document);
 		content = EmojiParser.parseToUnicode(content);
-
 		return content;
 	}
 }
