@@ -28,7 +28,7 @@ public class MarkdownView extends AbstractTemplateView {
         writer.append("<html>\n");
         writer.append("<head>\n");
 //        writer.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n");
-        writer.append("<link rel=\"stylesheet\" href=\"highlightjs/9.9.0/styles/atom-one-dark.css\">\n");
+        writer.append("<link rel=\"stylesheet\" href=\"highlightjs/9.9.0/styles/gruvbox-light.css\">\n");
         writer.append("<script src=\"highlightjs/9.9.0/highlight.js\"></script>\n");
         writer.append("<script src=\"highlightjs/9.9.0/registerLanguage.min.js\"></script>\n");
         writer.append("<script>hljs.initHighlightingOnLoad();</script>\n");
