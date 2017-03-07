@@ -13,11 +13,12 @@ public class BlogWebSpringrootApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BlogWebSpringrootApplication.class, args);
 	}
-	
+
 	@Bean
-    public ViewResolver getViewResolver(){
-        MarkdownViewResolver resolver = new MarkdownViewResolver();
-        resolver.setSuffix(".md");
-        return resolver;
-    }
+	public ViewResolver getViewResolver() {
+		MarkdownViewResolver resolver = new MarkdownViewResolver();
+		resolver.setSuffix(".md");
+		return resolver;
+	}
+	
 }
