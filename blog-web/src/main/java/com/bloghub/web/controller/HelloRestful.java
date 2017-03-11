@@ -15,7 +15,8 @@ public class HelloRestful {
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	@ResponseBody
 	public String hello() {
-		return "hello";
+		String hello = "hello";
+		return hello;
 	}
 
 	@RequestMapping(value = "/helloMap")

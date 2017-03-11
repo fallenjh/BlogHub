@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js markdown editor example</title>
+<!--     <link rel="stylesheet" href="style.css"> -->
+    <script src="https://unpkg.com/marked@0.3.6"></script>
+    <script src="https://unpkg.com/lodash@4.16.0"></script>
+    <!-- Delete ".min" for console warnings in development -->
+    <script src="js/vue.min.js"></script>
+  </head>
+  <body>
+
+     
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Blog Hub</h1>
+        <p>你可以在这里写你的博文，没有广告，开源项目，为了更好的你。</p>
+        <div id="login-app">
+	        <button v-show="!logined" type="button" class="btn btn-danger" @click="changeMain">注册</button>
+	        <button v-show="!logined" type="button" class="btn btn-success" @click="doLogin">登录</button>
+	        <label v-show="logined">欢迎回来，{{userCode}} - {{userName}} - {{email}}</label>
+	        <button v-show="logined" type="button" class="btn btn-danger" @click="doLogout">注销</button>
+        </div>
+      </div>
+      
+  </body>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="main.js"></script>
+</html>
