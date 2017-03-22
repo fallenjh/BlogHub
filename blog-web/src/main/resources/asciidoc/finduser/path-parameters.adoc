@@ -1,0 +1,8 @@
+./user/{userCode}
+|===
+|Parameter|Description
+
+|`userCode`
+|userCode
+
+|===

@@ -9,10 +9,11 @@
     <meta name="author" content="">
 <!--     <link rel="icon" href="../../favicon.ico"> -->
 
-    <title>Theme Template for Bootstrap</title>
+    <title>BlogHub</title>
 
     <!-- Vue.js -->
     <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
@@ -79,7 +80,9 @@
         <div id="login-app">
 	        <button v-show="!logined" type="button" class="btn btn-danger" @click="changeMain">注册</button>
 	        <button v-show="!logined" type="button" class="btn btn-success" @click="doLogin">登录</button>
-	        <label v-show="logined">欢迎回来，{{userCode}} - {{userName}} - {{email}}</label>
+	        <b-register v-show="showRegister" v-on:doRegister="doRegister"></b-register>
+	        <b-login v-show="showLogin"></b-login>
+<!-- 	        <label v-show="logined">欢迎回来，{{userCode}} - {{userName}} - {{email}}</label> -->
 	        <button v-show="logined" type="button" class="btn btn-danger" @click="doLogout">注销</button>
         </div>
       </div>

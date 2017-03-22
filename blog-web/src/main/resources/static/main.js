@@ -1,6 +1,24 @@
 /**
  * 
  */
+Vue.component('b-register', {
+  template: '<div>A Register component!<br>'
+	  + '<button type="button" class="btn btn-danger" v-on:click="doRegister">注册</button></div>'
+	  ,
+  method : {
+	  doRegister : function () {
+//			this.showRegister = false;
+//			this.showLogin = true;
+//			loginMain();
+		  this.$emit('doRegister');
+        },
+  }
+});
+
+Vue.component('b-login', {
+  template: '<div>A Login component!</div>'
+});
+
 
 function changeMain()
 {
@@ -39,7 +57,9 @@ var vm = new Vue({
 		userCode : '',
 		userName : '',
 		email : '',
-		logined : false
+		logined : false,
+		showRegister : false,
+		showLogin : false
 	},
     computed: {
         notLogined: function () {
@@ -48,11 +68,20 @@ var vm = new Vue({
       },
 	methods : {
 		changeMain : function (e) {
-			this.logined = false;
+			this.showRegister = true;
+			this.showLogin = false;
+		},
+		
+		doRegister: function (e) {
+			this.showRegister = true;
+			this.showLogin = false;
+//			loginMain();
 		},
 		
 		doLogin: function (e) {
-			loginMain();
+			this.showRegister = false;
+			this.showLogin = true;
+//			loginMain();
         },
         
         doLogout: function (e) {
